@@ -68,7 +68,7 @@ ul {
 }
 
 header {
-	height: 100vh;
+	height: 1080px;
 	background-image: url('../img/header.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -133,12 +133,12 @@ header .content {
 	height: calc(100% - 87px);
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 	text-align: center;
 }
 
 header .content h1 {
+	margin-top: 241px;
 	color: #fff;
 	font-size: 40px;
 	font-weight: 800;
@@ -154,6 +154,7 @@ header .content h2 {
 @media only screen and (max-width: 360px) {
 	header .content h1 {
 		font-size: 16px;
+		margin-top: 25px;
 	}
 
 	header .content h2 {
@@ -174,7 +175,7 @@ header .content form .select {
 }
 
 header .content form .select input {
-	padding: 33px 259px 33px 40px;
+	padding: 33px 111px 33px 40px;
 	color: #11002d;
 	font-size: 18px;
 	font-weight: 400;
@@ -231,7 +232,6 @@ header .content form .select select {
 	}
 
 	header .content {
-		margin-top: 40px;
 		height: auto;
 	}
 
@@ -314,15 +314,6 @@ header .content form > button {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 54px;
-	max-width: 958px;
-	margin: 0 auto;
-}
-
-.medicins .medicine_content {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	height: 100%;
 }
 
 .medicins h2 {
@@ -357,12 +348,89 @@ header .content form > button {
 	display: none;
 }
 
+@media only screen and (min-width: 361px) {
+	.medicins .support_diseases {
+		margin: 0 auto;
+		max-width: 1029px;
+	}
+
+	.medicins .support_diseases img {
+		margin-top: -75px;
+	}
+
+	.medicine.support_diseases h2 {
+		margin-top: 15px;
+	}
+	.medicins .covid_19 {
+		max-width: 958px;
+	}
+
+	.medicins .covid_19 .medicine_content h2 {
+		margin-top: 99px;
+	}
+
+	.medicins .docotore_24_7 .medicine_content {
+		width: 502px;
+		margin-left: auto;
+	}
+
+	.medicins .docotore_24_7 h2 {
+		margin-top: 61px;
+	}
+
+	.medicins .trusted_clinics h2 {
+		margin-top: 29px;
+		white-space: nowrap;
+	}
+	.medicins .trusted_clinics {
+		gap: 125px;
+		justify-items: end;
+	}
+
+	.medicins .trusted_clinics img {
+		margin-top: -65px;
+	}
+}
+
 @media only screen and (max-width: 360px) {
+	.docotore_24_7 {
+		margin-top: 15px;
+	}
+
+	.trusted_clinics {
+		margin-top: 52px;
+	}
+
+	.trusted_clinics img {
+		margin-top: 31px;
+	}
+
 	.medicine {
 		display: flex;
-		padding: 0 20px;
 		flex-direction: column;
 		align-items: center;
+		gap: 0;
+	}
+
+	.medicine:not(:first-child) p {
+		max-height: 115px;
+		overflow: hidden;
+	}
+
+	.medicine:first-child p {
+		max-height: 115px;
+		overflow: hidden;
+	}
+
+	.medicine:not(:first-child) p {
+		-webkit-line-clamp: 5;
+		-webkit-box-orient: vertical;
+		display: -webkit-box;
+		overflow: hidden;
+	}
+
+	.support_diseases .medicine_content {
+		margin-top: 32px;
 	}
 
 	.medicine:nth-child(2n) img:not(:first-child) {
@@ -396,7 +464,11 @@ header .content form > button {
 	.medicine img {
 		width: 221px;
 		height: 221px;
-		flex-shrink: 0;
+	}
+
+	.docotore_24_7 img {
+		width: 266px;
+		height: 179px;
 	}
 }
 
@@ -449,6 +521,7 @@ main {
 @media only screen and (max-width: 360px) {
 	.how_buy h2 {
 		margin-top: 64px;
+		font-size: 20px;
 	}
 
 	.how_buy .steps .step {
@@ -499,6 +572,10 @@ main {
 		border-bottom: 3px solid #5200d9;
 		overflow-x: hidden;
 	}
+
+	.countries:first-child {
+		margin-top: 90px;
+	}
 }
 
 .reviews {
@@ -512,7 +589,7 @@ main {
 	font-size: 32px;
 	font-weight: 600;
 	line-height: 91%;
-	margin-top: 150px;
+	margin-top: 130px;
 	text-align: center;
 }
 
@@ -595,7 +672,6 @@ main {
 	.reviews .reviews_cards {
 		display: flex;
 		gap: 12px;
-		padding-bottom: 20px;
 		width: 291px;
 	}
 
@@ -608,7 +684,7 @@ main {
 	}
 	.reviews h2 {
 		font-size: 20px;
-		margin-top: 64px;
+		margin-top: 63px;
 	}
 
 	.reviews .reviews_cards {
@@ -657,6 +733,11 @@ footer .container .social ul {
 }
 
 @media only screen and (max-width: 360px) {
+	footer {
+		margin-top: 100px;
+		padding: 25px 0 61px;
+	}
+
 	footer .container {
 		display: grid;
 		grid-template-columns: 1fr;
